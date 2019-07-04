@@ -1,0 +1,46 @@
+#Common elements in an array:
+
+
+a=int(input("n1:"))
+l=[]
+l3=[]
+for i in range(a):
+    b=int(input())
+    l.append(b)
+print(l)
+h=len(l)
+l3.append(h)
+c=int(input("n2:"))
+l1=[]
+
+for i in range(c):
+    d=int(input())
+    l1.append(d)
+print(l1)
+m=len(l1)
+l3.append(m)
+
+e=int(input("n3:"))
+l2=[]
+for i in range(e):
+    f=int(input())
+    l2.append(f)
+print(l2)
+g=len(l2)
+l3.append(g)
+big=max(l3)
+for i in range(0,big):
+    if l[i] in l1 and l[i] in l2:
+        print(l[i])
+    elif l1[i] in l and l1[i] in l2:
+        print(l1[i])
+    elif l2[i] in l and l2[i] in l1:
+        print(l2[i])
+
+output:
+6
+1 5 10 20 40 80 
+5
+6 7 20 80 9
+6
+1 2 3 20 80 7
