@@ -1,0 +1,19 @@
+a=input("Enter a string:")
+l=[]
+b=list(a)
+c=0
+for i in a:
+    if i not in l :
+        l.append(i)
+    else:
+        c=b.index(i)
+        print(c)
+        l=[]
+        for j in range(c+1,len(b)):
+            if i not in l:
+                l.append(b[j])
+for i in l:
+    print(i,end="")
+output:
+Enter a string:javaconceptoftheday
+oftheday
