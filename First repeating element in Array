@@ -1,0 +1,26 @@
+#firstRepeating:
+
+
+a=int(input("enter a value:"))
+l=[]
+for i in range(a):
+    b=int(input("Enter a value:"))
+    l.append(b)
+print(l)
+l1=[]
+for i in range(0,len(l)):
+    if l[i] in l[i+1:]:
+        print(l[i])
+        break
+
+output:
+enter a value:7
+Enter a value:10
+Enter a value:5
+Enter a value:3
+Enter a value:4
+Enter a value:3
+Enter a value:5
+Enter a value:6
+[10, 5, 3, 4, 3, 5, 6]
+5
