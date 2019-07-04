@@ -1,0 +1,55 @@
+1.	Given an array with all elements greater than or equal to zero. Return the maximum product of two numbers possible.
+
+Note : Save the file / class as “maxProductInArray” with appropriate file extension.
+
+Input:
+The first line of input contains an integer T denoting the number of test cases.
+The first line of each test case is N, size of array. The second line of each test case contains array elements.
+
+Output:
+Print the maximum product of two numbers possible.
+
+Constraints:
+1 ≤ T ≤ 100
+2 ≤ N ≤ 107
+0 ≤ A[i] ≤ 104
+
+Example:
+Input:
+2
+5
+1 100 42 4 23
+3
+20 30 40
+
+Output:
+4200
+1200
+
+Explanation:
+Testcase 1: Two maximum numbers are 100 and 42 and their product is 4200.
+
+ 
+#Product of two max number:
+
+a=int(input())
+l=[]
+for i in range(a):
+    b=int(input())
+    for j in range(b):
+        c=int(input())
+        l.append(c)
+l.sort()
+c=l[-1]*l[-2]
+print(c)
+
+
+output:
+test:1
+no of elements:5
+1
+3
+4
+6
+7
+Product:42
