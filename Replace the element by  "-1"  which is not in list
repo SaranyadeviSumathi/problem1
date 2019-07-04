@@ -1,0 +1,34 @@
+#Replace which element is not in list by -1:
+
+
+a=int(input("enter a range:"))
+l=[]
+for i in range(0,a):
+    b=int(input("enter a value:"))
+    l.append(b)
+c=l.sort()
+for i in range(0,10):
+    if i not in l:
+        print(-1)
+    else:
+        print(i)
+
+output:
+enter a range:7
+enter a value:1
+enter a value:2
+enter a value:3
+enter a value:4
+enter a value:6
+enter a value:8
+enter a value:9
+-1
+1
+2
+3
+4
+-1
+6
+-1
+8
+9
