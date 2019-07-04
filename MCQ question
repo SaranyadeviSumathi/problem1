@@ -1,0 +1,63 @@
+q=[{'q_id':'q1','q_description':'Author of python','q_option':['James Gosling','stevejobs','guido','patrick Naughton'],'q_answer':'guido'},
+{'q_id':'q2','q_description':'Array in python','q_option':['list','tuple','dictionary','set'],'q_answer':'list'},
+   {'q_id':'q3','q_description':'alphabet is','q_option':['a','10','#','*'],'q_answer':'a'}]
+c=len(q)
+d=0
+e=0
+for i,j in q[d].items():
+    if i=='q_answer':
+        continue
+    else:
+        print(j)
+
+while(c>0):
+    
+    a=input("enter operation:")
+    if a=='next':
+        d=d+1
+        if d>=0 and d<=c:
+            for j,k in q[d].items():
+                if j=='q_answer':
+                    continue
+                else:
+                    print(k)
+    if a=='previous':
+        d=d-1
+        if d>=0 and d<=c:
+            for j,k in q[d].items():
+                if j=='q_answer':
+                    continue
+                else:
+                    print(k)
+    if a=='answer':
+        b=int(input("enter crct option"))
+        if (q[d]['q_option'].index(q[d]['q_answer']))== b:
+            e=e+1
+    if a=='finish':
+        print(e)
+
+
+
+
+output:
+q1
+Author of python
+['James Gosling', 'stevejobs', 'guido', 'patrick Naughton']
+enter operation:answer
+enter crct option3
+enter operation:next
+q2
+Array in python
+['list', 'tuple', 'dictionary', 'set']
+enter operation:answer
+enter crct option0
+1
+enter operation:next
+q3
+alphabet is
+['a', '10', '#', '*']
+enter operation:answer
+enter crct option0
+2
+enter operation:finish
+2
