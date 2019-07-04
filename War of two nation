@@ -1,0 +1,98 @@
+War of Two Nations
+Sparta and Persia are fighting a war. A messenger is reporting the same to a remote location using the following format
+
+The first line of input (integer) represents the number of days of battle.
+The rest of the rows represents each day of battle.
+Here H represents Horse, E represents elephants, C represents cavalry and A represents archers.
+Capital letters represent Spartans and small letters represent Persian army.
+The . represents the number of units. For example H... represents 3 units of horses, E.... represents 4 units of elephants.
+X in the unit represents double points (X is equivalent to two dots)
+The objective is to calculate who wins the battle. Every line represents one day of battle.
+The team which scores the highest points wins. 
+Points are calculated as follows:
+Horse - 5 points
+Elephant - 10 points
+Archer - 3 points
+Cavalry - 1 point
+
+Note : The file/class should be named "SpartaAndPersia" with appropriate extension.
+
+So the points for
+H...E...H.XC..A..  means
+5*3 + 10*3 + 5*3 + 1*2 + 3*2 = 68 points
+
+Input 1:
+5
+H...E...H...C..A...h..e....h...c....a....$
+H.......................h.......................$ 
+H.XE...H.........C..A...h..e....h.Xc....a....$
+H...E...H...CXA...h..e.............h...c....a....$
+H...E...H.X.C..A.............hXe....h...c....a....$ 
+
+Output 1:
+Persia Wins
+
+
+#War of two nation
+
+a=int(input())
+l=[]
+
+for i in range(a):
+    b=input()
+    c=b[::-1]
+    l.append(c)
+sa=0
+a=0
+e=0
+sh=0
+se=0
+sc=0
+h=0
+c=0
+dot=0
+x=0
+for i in range(0,len(l)):
+    for j in l[i]:
+        if j=="." :
+            dot=dot+1
+        elif j=="X":
+            x=x+2
+        elif j=="H":
+            h=h+dot+x
+            dot=0
+            x=0
+        elif j=="E":
+            e=e+dot+x
+            dot=0
+            x=0
+        elif j=="A":
+            a=a+dot+x
+            dot=0
+            x=0
+        elif j=="C":
+            c=c+dot+x
+            dot=0
+            x=0
+        elif j=="h":
+            sh=sh+dot
+            dot=0
+            x=0
+        elif j=="e":
+            se=se+dot
+            dot=0
+        elif j=="a":
+            sa=sa+dot
+            dot=0
+        elif j=="c":
+            sc=sc+dot
+            dot=0
+#print(h,e,a,c)
+s=(h*5)+(e*10)+(a*3)+(c*1)
+p=(sh*5)+(se*10)+(sa*3)+(sc*1)
+print(s,p)
+if s>p:
+    print("sparta")
+else:
+    print("persia")
+
