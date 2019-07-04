@@ -1,0 +1,45 @@
+1.	This problem was asked by Google.
+
+Given a string of words delimited by spaces, reverse the words in string. For example, given "hello world here", return "here world hello"
+
+Taking a mutable string representation, perform this operation in-place.
+
+Input Format :
+Input contains a single line which is the input sentence A.
+
+Output Format : 
+Input contains a single line which is the reverse form of input sentence A.
+
+Constraints : 
+1 <= |S| <= 1000
+
+Note : The file/class should be named as "ReverseSentence" with appropriate file extension.
+
+Input 1 : 
+	hello world
+Output 1 : 
+	world hello
+
+Input 2 : 
+	welcome to sri shakthi
+Output 2 : 
+	shakthi sri to welcome
+	
+Input 3 : 
+	string of words delimited by
+Output 3 :
+	by delimited words of string.
+
+#String reverse:
+
+a=input().split()
+#print(a)
+for i in range(0,len(a)):
+    c=a[::-1]
+for i in c:
+    print(i,end=" ")
+
+output:
+hello world
+world hello
+    
