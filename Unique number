@@ -1,0 +1,26 @@
+3Unique value in a list:
+
+a=int(input())
+l=[]
+for i in range(a):
+    b=int(input())
+    l.append(b)
+#print(l)
+l1=[]
+d=0
+for i in l:
+    d=l.count(i)
+    if d==1:
+        l1.append(i)
+c=min(l1)
+print(c)
+
+
+output
+No of elements:5
+1
+2
+3
+1
+2
+Unique no:3
