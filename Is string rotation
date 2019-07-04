@@ -1,0 +1,21 @@
+IsStringROTATED:
+
+PROGRAM:
+a=input()
+b=input()
+l=[]
+for i in range(0,len(a)):
+    c=a[-1]+a[0:-1]
+    l.append(c)
+    a=c
+print(l)
+if b in l:
+    print("true")
+else:
+    print("false")
+
+OUTPUT:
+abcde
+cdeab
+['eabcd', 'deabc', 'cdeab', 'bcdea', 'abcde']
+True
